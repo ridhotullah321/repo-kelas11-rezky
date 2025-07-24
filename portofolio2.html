@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Fajar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --primary-color: #007bff;
+      --bg-color: #f4f7fa;
+      --text-color: #2c3e50;
+      --card-bg: #ffffff;
+      --footer-bg: #2c3e50;
+    }
+
+    body.dark {
+      --primary-color: #0d6efd;
+      --bg-color: #1c1c1c;
+      --text-color: #f0f0f0;
+      --card-bg: #2e2e2e;
+      --footer-bg: #000;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      transition: all 0.3s ease;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?fit=crop&w=1600&q=80') center/cover;
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+
+    header * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .project {
+      background: var(--card-bg);
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-left: 8px solid var(--primary-color);
+      border-radius: 6px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons a {
+      margin-right: 15px;
+      font-size: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    footer {
+      background: var(--footer-bg);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    .toggle-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="WIN_20250714_03_28_14_Pro.jpg" alt="Foto Fajar" class="profile-pic" />
+    <h1>Halo, Saya ridho👋</h1>
+    <p>Pelajar yang suka teknologi, desain, dan coding dan playing fotball 💻</p>
+  </header>
+
+  <section class="about">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah pelajar SMA yang suka membangun website dan desain UI/UX. Saya senang mencoba hal baru dan belajar bahasa pemrograman seperti HTML, CSS, dan Python.</p>
+  </section>
+
+  <section class="projects">
+    <h2>Proyek Saya</h2>
+    <div class="project">
+      <h3>Kalkulator Web</h3>
+      <p>Saya membuat kalkulator sederhana dengan HTML dan CSS. Desainnya minimalis, cocok untuk latihan logika dan tampilan.</p>
+    </div>
+    <div class="project">
+      <h3>Poster Edukasi Digital</h3>
+      <p>Membuat poster kampanye "Bijak Gunakan Internet" menggunakan Canva, untuk lomba antar kelas.</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Kontak</h2>
+    <p>Email: fajar@email.com</p>
+    <div class="social-icons">
+      <a href="https://instagram.com/fajar" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:fajar@email.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/fajar" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Fajar. Dibuat dengan semangat belajar dan coding!</p>
+  </footer>
+
+  <button class="toggle-button" onclick="toggleDarkMode()">🌓 Mode Gelap</button>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
